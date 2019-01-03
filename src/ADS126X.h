@@ -81,6 +81,7 @@ class ADS126X {
     void enablePGA(void);
     void bypassPGA(void);
     void setGain(uint8_t gain);
+    double getGainFactor();
     void setRate(uint8_t rate);
 
     void setReference(uint8_t negativeReference, uint8_t positiveReference);

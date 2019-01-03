@@ -398,6 +398,10 @@ void ADS126X::setGain(uint8_t gain) {
   ADS126X::writeRegister(ADS126X_MODE2);
 }
 
+double ADS126X::getGainFactor() {
+    return double(1 << REGISTER.MODE2.bit.GAIN);
+}
+
 void ADS126X::setRate(uint8_t rate) {
   REGISTER.MODE2.bit.DR = rate;
   ADS126X::writeRegister(ADS126X_MODE2);
